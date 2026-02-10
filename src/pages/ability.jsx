@@ -7,9 +7,12 @@ import Guess from "../components/Guess.jsx"
 
 function Ability() {
     const correctGuess = "Zed"
+    const [complete, setComplete] = useState(false);
     const [items, setItems] = useState([]);
 
     const addItem = (query) => {
+        if (complete) return;
+        if (query === correctGuess) {setComplete(true)};
         setItems((prev) => [...prev, [query, (query === correctGuess) ? "true" : "false"]]);
     };
 

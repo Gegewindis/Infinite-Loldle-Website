@@ -7,9 +7,12 @@ import SelectedGuess from "../components/SelectedGuess.jsx"
 
 function Quote() {
     const correctGuess = "Ornn"
+    const [complete, setComplete] = useState(false);
     const [items, setItems] = useState([]);
 
     const addItem = (query) => {
+        if (complete) return;
+        if (query === correctGuess) {setComplete(true)};
         setItems((prev) => [...prev, [query, (query === correctGuess) ? "true" : "false"]]);
     };
 
