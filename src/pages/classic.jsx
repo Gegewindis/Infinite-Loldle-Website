@@ -3,7 +3,7 @@ import { useState } from "react";
 import Header from "../components/Header.jsx"
 import InputGuess from "../components/InputGuess.jsx"
 import ClassicGuess from "../components/ClassicGuess.jsx"
-import InfoSlotName from "../components/InfoSlotName.jsx"
+import ClassicSlotDesc from "../components/ClassicSlotTitle.jsx"
 
 function Classic() {
     const [items, setItems] = useState([]);
@@ -16,7 +16,7 @@ function Classic() {
         <>
             <Header></Header>
             <InputGuess onSubmit={addItem}></InputGuess>
-            <InfoSlotName></InfoSlotName>
+            <ClassicSlotDesc></ClassicSlotDesc>
             <hr className="classic-underline"/>
             {items.map((query, index) => (
                 <ClassicGuess key={index} />

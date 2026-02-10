@@ -1,4 +1,4 @@
-import ClassicInfoSlot from "../components/ClassicInfoSlot.jsx"
+import ClassicGuessSlot from "../components/ClassicGuessSlot.jsx"
 
 function ClassicGuess(props) {
     const correct = {backgroundColor: "var(--color-correct)"}
@@ -6,14 +6,14 @@ function ClassicGuess(props) {
 
     return(
         <div className="classic-guess-container">
-            <ClassicInfoSlot content="Mana" containerStyle={correct}></ClassicInfoSlot>
-            <ClassicInfoSlot content="Mana" containerStyle={incorrect}></ClassicInfoSlot>
-            <ClassicInfoSlot content="Mana"></ClassicInfoSlot>
-            <ClassicInfoSlot content="Mana"></ClassicInfoSlot>
-            <ClassicInfoSlot content="Mana"></ClassicInfoSlot>
-            <ClassicInfoSlot content="Mana"></ClassicInfoSlot>
-            <ClassicInfoSlot content="Mana"></ClassicInfoSlot>
-            <ClassicInfoSlot content="Mana"></ClassicInfoSlot>
+            <ClassicGuessSlot content="Mana" containerStyle={correct}></ClassicGuessSlot>
+            <ClassicGuessSlot content="Mana" containerStyle={incorrect}></ClassicGuessSlot>
+            <ClassicGuessSlot content="Mana"></ClassicGuessSlot>
+            <ClassicGuessSlot content="Mana"></ClassicGuessSlot>
+            <ClassicGuessSlot content="Mana"></ClassicGuessSlot>
+            <ClassicGuessSlot content="Mana"></ClassicGuessSlot>
+            <ClassicGuessSlot content="Mana"></ClassicGuessSlot>
+            <ClassicGuessSlot content="Mana"></ClassicGuessSlot>
         </div>
     );
 }
