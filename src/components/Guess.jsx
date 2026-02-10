@@ -1,9 +1,9 @@
 
 
-function SelectedQuote(props) {
+function Guess(props) {
     return (
         <>
-        <div className="quote-guess-container">
+        <div className="guess-container">
             <h3 style={{color: (props.correct === 'true') ? "var(--color-correct)" : "var(--color-incorrect"}}>{props.champGuess}</h3>
         </div>
         </>
@@ -11,4 +11,4 @@ function SelectedQuote(props) {
 
 };
 
-export default SelectedQuote
+export default Guess

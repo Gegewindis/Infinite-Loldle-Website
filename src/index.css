@@ -183,7 +183,7 @@ header{
 }
 
 /* Quote Gamemode */
-.quote-container {
+.selected-guess-container {
     display: flex;
     flex-direction: column;
 
@@ -201,7 +201,7 @@ header{
     width: 300px;
 }
 
-.quote-container h3{
+.selected-guess-container h3{
     color: var(--color-accent);
 }
 
@@ -217,7 +217,7 @@ header{
     border-top: 20px solid var(--color-text)
 }
 
-.quote-guess-container {
+.guess-container {
     background-color: var(--color-secondary);
     justify-self: center;
     width: 300px;

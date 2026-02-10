@@ -6,6 +6,10 @@ function InputGuess({onSubmit}) {
 
     const handleSubmit = () => {
         if (!query.trim()) return;
+        if (query.length > 20) {
+            setQuery(""); 
+            return;
+        }
         onSubmit(query);
         setQuery("");
         // do your search logic here

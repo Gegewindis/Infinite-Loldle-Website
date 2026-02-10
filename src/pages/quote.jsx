@@ -2,8 +2,8 @@ import { useState } from "react";
 
 import Header from "../components/Header.jsx"
 import InputGuess from "../components/InputGuess.jsx"
-import SelectedQuote from "../components/SelectedQuote.jsx"
-import QuoteGuess from "../components/QuoteGuess.jsx"
+import Guess from "../components/Guess.jsx"
+import SelectedGuess from "../components/SelectedGuess.jsx"
 
 function Quote() {
     const correctGuess = "Ornn"
@@ -17,10 +17,10 @@ function Quote() {
         <>
             <Header></Header>
             <InputGuess onSubmit={addItem}></InputGuess>
-            <SelectedQuote></SelectedQuote>
+            <SelectedGuess title="Which champ says" guess="'An iron will must be forged!'"></SelectedGuess>
             <div className="arrow"></div>
             {items.map((values, index) => (
-                <QuoteGuess key={index} champGuess={values[0]} correct={values[1]}/>
+                <Guess key={index} champGuess={values[0]} correct={values[1]}/>
             ))}
         </>
     )
