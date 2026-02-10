@@ -1,11 +1,13 @@
 import { useState } from "react";
 
-function InputGuess() {
+function InputGuess({onSubmit}) {
 
     const [query, setQuery] = useState("");
 
     const handleSubmit = () => {
-        console.log("User searched for:", query);
+        if (!query.trim()) return;
+        onSubmit(query);
+        setQuery("");
         // do your search logic here
     };
 

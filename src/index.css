@@ -5,6 +5,8 @@
         --color-text: hsl(211, 100%, 95%);
         --color-accent: hsl(240, 80%, 80%);
         --color-tertiary: hsl(0, 96%, 70%);
+        --color-correct: hsl(162, 91%, 29%);
+        --color-incorrect: hsl(349, 79%, 37%);
     }
     
 .light {
@@ -120,11 +122,18 @@ header{
 
     border-style: solid;
     border-width: 1px;
+    border-radius: 10px;
 
 
     margin-top: 50px;
     width: 500px;
     height: 300px;
+}
+
+.classic-underline{
+    border: 1px solid white;
+    width: 870px;
+    justify-self: center;
 }
 
 .input-guess-container input{
@@ -138,7 +147,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: fit-content;
+    flex: 1;
 }
 
 .classic-info-slot-container {

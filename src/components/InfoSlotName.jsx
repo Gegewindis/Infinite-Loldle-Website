@@ -11,14 +11,14 @@ function InfoSlotName() {
 
     return(
         <div className="classic-Info-description">
-            <ClassicInfoSlot content="Champion" continerStyle={descStyle}></ClassicInfoSlot>
-            <ClassicInfoSlot content="Gender" continerStyle={descStyle}></ClassicInfoSlot>
-            <ClassicInfoSlot content="Position(s)" continerStyle={descStyle}></ClassicInfoSlot>
-            <ClassicInfoSlot content="Species" continerStyle={descStyle}></ClassicInfoSlot>
-            <ClassicInfoSlot content="Resource" continerStyle={descStyle}></ClassicInfoSlot>
-            <ClassicInfoSlot content="Range type" continerStyle={descStyle}></ClassicInfoSlot>
-            <ClassicInfoSlot content="Region(s)" continerStyle={descStyle}></ClassicInfoSlot>
-            <ClassicInfoSlot content="Release year" continerStyle={descStyle}></ClassicInfoSlot>
+            <ClassicInfoSlot content="Champion" containerStyle={descStyle}></ClassicInfoSlot>
+            <ClassicInfoSlot content="Gender" containerStyle={descStyle}></ClassicInfoSlot>
+            <ClassicInfoSlot content="Position(s)" containerStyle={descStyle}></ClassicInfoSlot>
+            <ClassicInfoSlot content="Species" containerStyle={descStyle}></ClassicInfoSlot>
+            <ClassicInfoSlot content="Resource" containerStyle={descStyle}></ClassicInfoSlot>
+            <ClassicInfoSlot content="Range type" containerStyle={descStyle}></ClassicInfoSlot>
+            <ClassicInfoSlot content="Region(s)" containerStyle={descStyle}></ClassicInfoSlot>
+            <ClassicInfoSlot content="Release year" containerStyle={descStyle}></ClassicInfoSlot>
         </div>
     );
 }
