@@ -7,6 +7,9 @@ import ClassicSlotDesc from "../components/ClassicSlotTitle.jsx"
 
 function Classic() {
     const [items, setItems] = useState([]);
+    const emptyStyle = {
+        height: "200px"
+    }
 
     const addItem = (query) => {
         setItems((prev) => [...prev, query]);
@@ -21,6 +24,7 @@ function Classic() {
             {items.map((query, index) => (
                 <ClassicGuess key={index} />
             ))}
+            <div style={emptyStyle}></div>
         </>
     )
 }

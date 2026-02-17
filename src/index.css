@@ -85,6 +85,14 @@ header{
     list-style-type: none;
 }
 
+/* Home */
+.title-container {
+    justify-self: center;
+    font-size: 3.5vw;
+    font-style: italic;
+    margin: 30px;
+}
+
 /* Gamemode */
 .select-gamemode-container {
     display: flex;
@@ -95,20 +103,26 @@ header{
 .gamemode-container {
     display: flex;
     justify-content: center;
-    background-color: var(--color-secondary);
-    width: 200px;
-    height: 50px;
+    align-items: center;
+    background-color: var(--color-header);
+    width: 300px;
+    height: 100px;
     padding-left: 10px;
     padding-right: 10px;
-    margin-top: 10px;
+    margin: 10px;
 
     border-style: solid;
     border-width: 3px;
     border-color: var(--color-text);
+    border-radius: 1vw;
 }
 
 .gamemode-container:hover {
   transform: scale(1.05);
+}
+
+.header-nav label:hover{
+    cursor: pointer;
 }
 
 /* Classic Gamemode */
@@ -118,7 +132,7 @@ header{
     justify-content: space-evenly;
     align-items: center;
     justify-self: center;
-    background-color: var(--color-secondary);
+    background-color: var(--color-header);
 
 
     border-style: solid;
@@ -138,7 +152,7 @@ header{
 }
 
 .input-guess-container input{
-    color: var(--color-secondary);
+    color: var(--color-header);
     padding: 10px;
     width: 250px;
     
@@ -196,7 +210,7 @@ header{
     border: 2px solid var(--color-text);
     border-radius: 10px;
 
-    background-color: var(--color-secondary);
+    background-color: var(--color-header);
     height: 150px;
     width: 300px;
 }
@@ -218,7 +232,7 @@ header{
 }
 
 .guess-container {
-    background-color: var(--color-secondary);
+    background-color: var(--color-header);
     justify-self: center;
     width: 300px;
     height: 100px;
@@ -229,4 +243,68 @@ header{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+/* Login Screen */
+.login-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 600px;
+    font-size: 40px;
+}
+
+.login-title-container {
+    padding-bottom: 100px;
+}
+
+.login-fill-form {
+    border-radius: 1vw;
+    background-color: var(--color-header);
+    display: flex;
+    /* justify-content: space-evenly; */
+    flex-direction: column;
+    height: 100%;
+    width: 25vw;
+    padding: 40px;
+    margin-top: 30vh;
+}
+
+.login-fill-form h3{
+    margin-top: 70px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.login-submit-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.login-submit-container button{
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding: 3px;
+    color: black;
+}
+
+.login-fill-form p{
+    font-size: 15px;
+}
+
+.login-sign-up-link {
+    color: var(--color-tertiary);
+}
+
+.login-fill-form input{
+    margin-bottom: 10px;
+    padding: 10px;
+
+    color: black;
 }
