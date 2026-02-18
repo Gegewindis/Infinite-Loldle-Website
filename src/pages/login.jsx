@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom"
 function Login() {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+    const [userMessage, setUserMessage] = useState("")
     const navigate = useNavigate()
 
     function handleSubmit(event) {
@@ -22,7 +23,7 @@ function Login() {
                     localStorage.setItem("token", username)
                     navigate('/infinite-loldle/');
                 } else {
-                    console.log(data)
+                    setUserMessage("Please try again!")
                 }
             })
             .catch(err => console.error(err));
@@ -35,7 +36,8 @@ function Login() {
             <Header></Header>
             <div className="login-container">
                 <div className="login-title-container">
-                    Login in to your account
+                    <label>Login to your account</label>
+                    <p>{userMessage}</p>
                 </div>
                 <form onSubmit={handleSubmit} className="login-fill-form">
                     <h3>Username</h3>

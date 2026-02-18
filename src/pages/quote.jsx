@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Header from "../components/Header.jsx"
 import InputGuess from "../components/InputGuess.jsx"
@@ -15,6 +15,13 @@ function Quote() {
         if (query === correctGuess) {setComplete(true)};
         setItems((prev) => [...prev, [query, (query === correctGuess) ? "true" : "false"]]);
     };
+
+    useEffect(() => {
+    fetch("http://localhost:8000/api/get_random_quote/")
+        .then(res => res.json())
+        .then(data => console.log(data))
+        .catch(err => console.error(err));
+    }, []);
 
     return (
         <>
