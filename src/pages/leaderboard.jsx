@@ -14,7 +14,7 @@ function Leaderboard() {
         <div className="leaderboard-container">
             <div className="leaderboard-user-container"><h2>{activeUser}</h2><h3>#{rank}</h3></div>
             <div className="leaderboard-board-container">
-                <LeaderboardUserSlot username="Larsson" points="10324 points" lastPlayed="Last played: 1975-03-21"></LeaderboardUserSlot>
+                <LeaderboardUserSlot position="1" username="Larsson" points="10324 points" lastPlayed="Last played: 1975-03-21"></LeaderboardUserSlot>
 
 
             </div>
