@@ -4,9 +4,11 @@ import Header from "../components/Header.jsx"
 import InputGuess from "../components/InputGuess.jsx"
 import ClassicGuess from "../components/ClassicGuess.jsx"
 import ClassicSlotDesc from "../components/ClassicSlotTitle.jsx"
+import Victory from "../components/Victory.jsx"
 
 function Classic() {
     const [items, setItems] = useState([]);
+    const [complete, setComplete] = useState(false);
 
     const emptyStyle = {
         height: "200px"
@@ -32,6 +34,7 @@ function Classic() {
             {items.map((query, index) => (
                 <ClassicGuess key={index} />
             ))}
+            <div>{complete ? <Victory points="100"/> : ""}</div>
             <div style={emptyStyle}></div>
         </>
     )

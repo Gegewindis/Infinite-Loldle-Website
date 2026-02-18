@@ -4,11 +4,16 @@ import Header from "../components/Header.jsx"
 import InputGuess from "../components/InputGuess.jsx"
 import SelectedVariable from "../components/SelectedGuess.jsx"
 import Guess from "../components/Guess.jsx"
+import Victory from "../components/Victory.jsx"
 
 function Ability() {
     const correctGuess = "Zed"
     const [complete, setComplete] = useState(false);
     const [items, setItems] = useState([]);
+
+    const emptyStyle = {
+        height: "200px"
+    }
 
     const addItem = (query) => {
         if (complete) return;
@@ -32,6 +37,8 @@ function Ability() {
             {items.map((values, index) => (
                 <Guess key={index} champGuess={values[0]} correct={values[1]}/>
             ))}
+            <div>{complete ? <Victory points="100"/> : ""}</div>
+            <div style={emptyStyle}></div>
         </>
     )
 }

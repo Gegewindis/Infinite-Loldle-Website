@@ -4,11 +4,16 @@ import Header from "../components/Header.jsx"
 import InputGuess from "../components/InputGuess.jsx"
 import Guess from "../components/Guess.jsx"
 import SelectedGuess from "../components/SelectedGuess.jsx"
+import Victory from "../components/Victory.jsx"
 
 function Quote() {
     const correctGuess = "Ornn"
     const [complete, setComplete] = useState(false);
     const [items, setItems] = useState([]);
+
+    const emptyStyle = {
+        height: "200px"
+    }
 
     const addItem = (query) => {
         if (complete) return;
@@ -25,6 +30,7 @@ function Quote() {
 
     return (
         <>
+        
             <Header></Header>
             <InputGuess onSubmit={addItem}></InputGuess>
             <SelectedGuess title="Which champ says" guess="'An iron will must be forged!'"></SelectedGuess>
@@ -32,6 +38,8 @@ function Quote() {
             {items.map((values, index) => (
                 <Guess key={index} champGuess={values[0]} correct={values[1]}/>
             ))}
+            <div>{complete ? <Victory points="100"/> : ""}</div>
+            <div style={emptyStyle}></div>
         </>
     )
 }

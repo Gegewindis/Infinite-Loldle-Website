@@ -364,3 +364,50 @@ header{
     margin-right: 40px;
     font-weight: normal;
 }
+
+/* Leaderboard */
+
+.victory-container {
+    margin: 30px;
+    height: 330px;
+    width: 450px;
+    background-color: var(--color-secondary);
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    border-radius: 1vw;
+}
+
+.victory-container h3 {
+    margin-top: 30px;
+    font-weight: normal;
+}
+
+.victory-container-header {
+    margin-top: 30px;
+    color: var(--color-tertiary);
+}
+
+.victory-container-restart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-header);
+    width: 300px;
+    height: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--color-text);
+    border-radius: 1vw;
+}
+
+.victory-container-restart:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
