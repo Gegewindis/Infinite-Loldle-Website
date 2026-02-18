@@ -14,6 +14,7 @@ function Header() {
     function SignOut() {
         localStorage.removeItem("token")
         setToken(null)
+        navigate("/infinite-loldle/")
     }
 
     return(
@@ -26,10 +27,9 @@ function Header() {
             </div>
             <nav className="header-nav">
                 <ul>
-                    <Link>Leaderboard</Link>
+                    <Link to="/infinite-loldle/leaderboard/">Leaderboard</Link>
                     <Link>About Me</Link>
                     <label onClick={currFunction}>{labelText}</label>
-
                 </ul>
             </nav>
         </header>

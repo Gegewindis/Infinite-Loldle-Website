@@ -5,6 +5,7 @@ import Quote from "./pages/quote.jsx"
 import Ability from "./pages/ability.jsx"
 import Login from "./pages/login.jsx"
 import SignUp from "./pages/signup.jsx"
+import Leaderboard from "./pages/leaderboard.jsx"
 
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
       { path: "/infinite-loldle/ability", element: <Ability /> },
       { path: "/infinite-loldle/login", element: <Login /> },
       { path: "/infinite-loldle/sign_up", element: <SignUp /> },
+      { path: "/infinite-loldle/leaderboard", element: <Leaderboard /> },
       { path: "*", element: <NotFoundPage /> },
     ],
   },
