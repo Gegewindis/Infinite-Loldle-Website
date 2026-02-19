@@ -2,11 +2,16 @@ function ClassicGuessSlot(props) {
     let backgroundStyle;
 
     if (props.correct == null) {
+        backgroundStyle = {backgroundColor: "var(--color-ishcorrect)"}
+        
+    } else if (props.correct == "transparent") {
         backgroundStyle = {backgroundColor: "transparent"}
+        
+    } else if (!props.correct) {
+        backgroundStyle = {backgroundColor: "var(--color-incorrect)"}
+
     } else if (props.correct) {
         backgroundStyle = {backgroundColor: "var(--color-correct)"}
-    } else {
-        backgroundStyle = {backgroundColor: "var(--color-incorrect)"}
     }
 
     return(

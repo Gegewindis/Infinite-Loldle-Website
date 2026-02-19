@@ -7,6 +7,7 @@
         --color-tertiary: hsl(0, 96%, 70%);
         --color-correct: hsl(162, 91%, 29%);
         --color-incorrect: hsl(349, 79%, 37%);
+        --color-ishcorrect: hsl(24, 73%, 49%);
     }
     
 .light {
@@ -261,8 +262,10 @@ header{
     border-radius: 10px;
 
     background-color: var(--color-header);
-    height: 150px;
+    height: fit-content;
+    min-height: 150px;
     width: 300px;
+    padding: 20px;
 }
 
 .selected-guess-container h3{
@@ -420,7 +423,7 @@ header{
 
 .victory-container {
     margin: 30px;
-    height: 330px;
+    height: 400px;
     width: 450px;
     background-color: var(--color-secondary);
     display: flex;
@@ -429,11 +432,14 @@ header{
     align-self: center;
     align-items: center;
     border-radius: 1vw;
+    text-align: center;
 }
 
 .victory-container h3 {
     margin-top: 30px;
     font-weight: normal;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .victory-container-header {

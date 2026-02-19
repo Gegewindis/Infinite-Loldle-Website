@@ -1,5 +1,5 @@
 function SelectedGuess(props) {
-    var text = props.guess
+    let text = props.guess
 
     return (
         <>

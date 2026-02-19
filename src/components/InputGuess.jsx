@@ -10,7 +10,7 @@ function InputGuess({onSubmit}) {
             setQuery(""); 
             return;
         }
-        onSubmit(query);
+        onSubmit(query.charAt(0).toUpperCase() + query.slice(1));
         setQuery("");
         // do your search logic here
     };
