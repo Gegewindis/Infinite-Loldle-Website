@@ -30,7 +30,23 @@ function Classic() {
     const addItem = async (query) => {
         const guessInfo = await fetch_guess(query)
         if (guessInfo == null) {return}
-        if (guessInfo[0] == correctInfo[0]) {setComplete(true); setPoints(basePoints - (basePoints/20) * items.length - Math.trunc((Date.now() - startingTime)/1000))}
+        if (guessInfo[0] == correctInfo[0]) {
+            const username = localStorage.getItem("token")
+            const resPoints = basePoints - (basePoints/20) * items.length - Math.trunc((Date.now() - startingTime)/1000)
+
+            setComplete(true) 
+            setPoints(resPoints)
+
+            if (username) {
+                fetch("http://localhost:8000/api/update_user_points/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ username, resPoints})
+                })   
+                    .then(res => res.json())       
+                    .then(data => console.log(data.message))
+            }
+        }
         if (guessInfo[0].length > 7 && !guessInfo[0].includes(" ")) {guessInfo[0] = guessInfo[0].slice(0, 7) + "- " + guessInfo[0].slice(7)}
 
         console.log(correctInfo) // TEST

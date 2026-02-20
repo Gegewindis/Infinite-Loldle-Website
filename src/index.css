@@ -408,15 +408,34 @@ header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
     width: 100%;
-    height: 75px;
+    height: 100px;
 }
 
 .leaderboard-user-slot h3{
-    margin-left: 40px;
-    margin-right: 40px;
     font-weight: normal;
+    text-align: center;
+    overflow: hidden;
+}
+
+.leaderboard-index {
+    width: 100px;
+    /* background-color: rgb(25, 25, 88); */
+}
+
+.leaderboard-username {
+    width: 250px;
+    /* background-color: rgb(104, 33, 33); */
+}
+
+.leaderboard-points {
+    width: 120px;
+    /* background-color: rgb(39, 104, 104); */
+}
+
+.leaderboard-last-played {
+    width: 300px;
+    /* background-color: rgb(87, 35, 87); */
 }
 
 /* Leaderboard */

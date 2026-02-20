@@ -35,7 +35,23 @@ function Quote() {
         const existingName = await fetch_guess(query)
         if (!existingName) return;
 
-        if (query === correctGuess) {setComplete(true); setPoints(basePoints - (basePoints/20) * items.length - Math.trunc((Date.now() - startingTime)/1000))};
+        if (query === correctGuess) {
+            const username = localStorage.getItem("token")
+            const resPoints = basePoints - (basePoints/20) * items.length - Math.trunc((Date.now() - startingTime)/1000)
+
+            setComplete(true) 
+            setPoints(resPoints)
+
+            if (username) {
+                fetch("http://localhost:8000/api/update_user_points/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ username, resPoints})
+                })   
+                    .then(res => res.json())       
+                    .then(data => console.log(data.message))
+            }
+        }
         setItems((prev) => [...prev, [query, (query === correctGuess) ? "true" : "false"]]);
     };
 
