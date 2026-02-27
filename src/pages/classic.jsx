@@ -29,7 +29,8 @@ function Classic() {
 
     const addItem = async (query) => {
         const guessInfo = await fetch_guess(query)
-        if (guessInfo == null) {return}
+        if (guessInfo == null || complete) {return}
+
         if (guessInfo[0] == correctInfo[0]) {
             const username = localStorage.getItem("token")
             const resPoints = basePoints - (basePoints/20) * items.length - Math.trunc((Date.now() - startingTime)/1000)
@@ -47,7 +48,6 @@ function Classic() {
                     .then(data => console.log(data.message))
             }
         }
-        if (guessInfo[0].length > 7 && !guessInfo[0].includes(" ")) {guessInfo[0] = guessInfo[0].slice(0, 7) + "- " + guessInfo[0].slice(7)}
 
         console.log(correctInfo) // TEST
 
@@ -80,7 +80,7 @@ function Classic() {
 
                 return <ClassicGuess 
                 key={index}
-                name={guessInfo[0]}
+                name={(guessInfo[0].length > 7 && !guessInfo[0].includes(" ")) ? guessInfo[0].slice(0, 7) + "- " + guessInfo[0].slice(7) : guessInfo[0]}
                 gender={guessInfo[1]}
                 rangeType={guessInfo[2]}
                 resource={guessInfo[3]}
